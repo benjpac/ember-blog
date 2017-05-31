@@ -1,9 +1,6 @@
-<h1>Index</h1>
-
-<ul>
-  {{#each model as |post|}}
-    <li>{{post.title}}</li>
-  {{/each}}
-</ul>
-
 {{new-post savePost2="savePost3"}}
+
+
+{{#each model as |post|}}
+  {{post-tile post=post update4="update5" delete4="delete5"}}
+{{/each}}

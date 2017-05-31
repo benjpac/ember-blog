@@ -1,0 +1,21 @@
+{{#if updatePostForm}}
+  <h4>Update {{post.title}}</h4>
+  <form>
+    <div class="form-group">
+      <label>Title</label>
+      {{input type="text" class="form-control" value=title id="title" placeholder=post.title}}
+    </div>
+    <div class="form-group">
+      <label>Author</label>
+      {{input type="text" class="form-control" value=author id="author" placeholder=post.author}}
+    </div>
+    <div class="form-group">
+      <label>Content</label>
+      {{textarea rows="8" cols="50" class="form-control" id="content" value=content placeholder=post.content}}
+    </div>
+    <button {{action 'update1' post}} class="btn btn-primary">Save</button>
+    <button {{action 'delete1' post}} class="btn btn-danger">Delete</button>
+  </form>
+{{else}}
+  <button {{action 'updatePostForm'}} class="btn btn-primary">Update Post</button>
+{{/if}}

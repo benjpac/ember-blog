@@ -11,10 +11,10 @@
     </div>
     <div class="form-group">
       <label>Content</label>
-      {{textarea rows="8" cols="50" class="form-control" id="content" value=content}}
+      {{textarea rows="8" cols="50" class="form-control" id="content" value=content placeholder="Add content"}}
     </div>
-    <button {{action 'savePost1'}} class="btn bg-primary">Save</button>
+    <button {{action 'savePost1'}} class="btn btn-primary">Save</button>
   </form>
 {{else}}
-  <button {{action 'postFormShow'}}>Add New Post</button>
+  <button {{action 'postFormShow'}} class="btn btn-success">Add New Post</button>
 {{/if}}
