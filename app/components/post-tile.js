@@ -7,6 +7,15 @@ export default Ember.Component.extend({
     },
     delete3(post) {
       this.sendAction('delete4', post);
+    },
+    saveComment3(post, params) {
+      this.sendAction('saveComment4', post, params);
+    },
+    updateComment5(params) {
+      this.sendAction('updateComment6', params);
+    },
+    deleteComment5(comment) {
+      this.sendAction('deleteComment6', comment);
     }
   }
 });

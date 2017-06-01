@@ -7,5 +7,6 @@ export default DS.Model.extend({
         defaultValue(){
         return new Date();
         }
-    })    
-});
+    }),
+    post: DS.belongsTo('post', { aync: true })    
+}); 

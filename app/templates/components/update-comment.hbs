@@ -1,0 +1,17 @@
+{{#if updateCommentForm}}
+  <h4>Update {{comment.title}}</h4>
+  <form>
+    <div class="form-group">
+      <label>Author</label>
+      {{input type="text" class="form-control" value=author id="author" placeholder=comment.author}}
+    </div>
+    <div class="form-group">
+      <label>Content</label>
+      {{textarea rows="3" cols="50" class="form-control" id="content" value=content placeholder=comment.content}}
+    </div>
+    <button {{action 'updateComment1' post}} class="btn btn-primary">Save</button>
+    <button {{action 'deleteComment1' comment}} class="btn btn-danger">Delete</button>
+  </form>
+{{else}}
+  <button {{action 'updateCommentForm'}} class="btn btn-warning">Update Comment</button>
+{{/if}}

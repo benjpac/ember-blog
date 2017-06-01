@@ -1,5 +1,7 @@
 {{new-post savePost2="savePost3"}}
 
-{{#each model as |post|}}
-  {{post-tile post=post update4="update5" delete4="delete5"}}
+<!-- {{sort-by-date model "posts" "descending"}} -->
+
+{{#each model.posts as |post|}}
+  {{post-tile post=post update4="update5" delete4="delete5" saveComment4="saveComment5" updateComment6="updateComment7" deleteComment6="deleteComment7"}}
 {{/each}}
